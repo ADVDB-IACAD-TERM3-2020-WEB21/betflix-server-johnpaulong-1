@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 // TODO: Connect to mongo here
 mongoose.connect('mongodb://localhost/test', {useNewUrlParser: true});
 // TODO: Replace `{}` with actual Movie model
-const Movie = mongoose.model('Movie', new mongoose.Schema({}))
+const Movie = mongoose.model('Movie', new mongoose.Schema({title: String}))
 
 const getMovieList = async () => {
   return await Movie.find({})
